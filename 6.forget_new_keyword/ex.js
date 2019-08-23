@@ -3,7 +3,6 @@ var Vehicle = function() {
 };
 
 var v = Vehicle();
-
 try {
   console.log(v.price);
 } catch (ex) {

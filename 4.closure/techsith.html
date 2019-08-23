@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      // Closure are nothing but functions with PRESERVED DATA.
+      var addTo = function(passed) {
+        var add = function(inner) {
+          return passed + inner;
+        };
+        return add;
+      };
+
+      var addThree = new addTo(3);
+      var addFour = new addTo(4);
+
+      console.dir(addThree);
+      console.log(addThree);
+      console.dir(addFour);
+
+      console.log(addThree(1));
+      console.log(addFour(1));
+    </script>
+  </body>
+</html>
